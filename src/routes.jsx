@@ -7,8 +7,9 @@ import {
 } from "react-router-dom";
 import { Layout } from "./pages/Layout";
 import { HomePage } from "./pages/HomePage";
-import BookPage from "./pages/BookPage";
+import SingleBookPage from "./pages/SingleBookPage";
 import AuthorPage from "./pages/AuthorPage";
+import SingleAuthorPage from "./pages/SingleAuthorPage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,8 +22,9 @@ export const router = createBrowserRouter(
     // Root Route: All navigation will start from here.
     <Route path="/" element={<Layout />} errorElement={<h1>Not found!</h1>}>
       <Route path="/" element={<HomePage />} />
-      <Route path="/books/:id" element={<BookPage />} />
-      <Route path="/authors/:id" element={<AuthorPage />} />
+      <Route path="/books/:id" element={<SingleBookPage />} />
+      <Route path="/author" element={<AuthorPage />} />
+      <Route path="/author/:name" element={<SingleAuthorPage />} />
     </Route>
   )
 );
