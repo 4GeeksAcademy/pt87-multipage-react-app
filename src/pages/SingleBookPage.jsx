@@ -86,7 +86,9 @@ const SingleBookPage = () => {
               } awesome
             </span>
           </div>
-          <img src={getBook()?.cover} alt="" />
+          <img src={getBook()?.cover} style={{
+            maxWidth: "100%"
+          }} className="mt-3" alt="" />
         </div>
       </div>
     </div>
